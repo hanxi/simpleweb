@@ -85,11 +85,6 @@ end)
 else
 
 skynet.start(function()
-    local ok, errno = serverlist.setup()
-    if not ok then
-        error("cannot get server info. err:"..errno)
-    end
-
     local agent = {}
     for i= 1, 20 do
         agent[i] = skynet.newservice(SERVICE_NAME, "agent")
