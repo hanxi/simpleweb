@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>服务器控制台</title>
+        <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+        <script src="/static/jquery-3.4.1.min.js"crossorigin="anonymous"></script>
+        <script src="/static/popper.min.js"crossorigin="anonymous"></script>
+        <script src="/static/bootstrap.min.js"crossorigin="anonymous"></script>
+
+        <script type="text/javascript" src="/static/app.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                run_app()
+            })
+        </script>
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col">
+                    <div class="card card-primary">
+                        <div class="card-header">操作服务器</div>
+                        <div class="card-body">
+                            <button id="testget" class="btn btn-default" type="button">测试GET</button>
+                            <button id="testpost" class="btn btn-default" type="button">测试POST</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col">
+                    <div class="card card-primary">
+                        <div class="card-header">指令输出</div>
+                        <div class="card-body">
+                            <pre id="output">...</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
