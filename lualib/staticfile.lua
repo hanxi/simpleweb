@@ -5,6 +5,7 @@ local root = skynet.getenv "static_path" or "./static/"
 local cache = setmetatable({}, { __mode = "kv"  })
 
 local function cachefile(_, filename)
+    filename = filename:gsub('%.%.', '')
 	local v = cache[filename]
 	if v then
 		return v[1]
