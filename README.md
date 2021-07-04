@@ -3,6 +3,8 @@ skynet simpleweb for control server
 
 一个简单的 skynet web 框架，用于在网页里控制 skynet 服务器。采用 AJAX 的 GET 和 POST 方式调用服务器命令。
 
+新的 web 框架 <https://github.com/hanxi/wlua>
+
 ## 启动
 
 ```
