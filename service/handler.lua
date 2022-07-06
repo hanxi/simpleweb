@@ -7,6 +7,38 @@ require "skynet.manager"
 
 local CMD = {}
 
+local function syscmd(cmd)
+  skynet.error("syscmd. cmd:", cmd)
+  local pfile = io.popen(cmd .. " 2>&1")
+  local ret = pfile:read("a")
+  pfile:close()
+  return ret
+end
+
+function CMD.get_startskynet(query, header, body)
+  local cmd = "bash startskynet.sh"
+  local ret = syscmd(cmd)
+  return ret
+end
+
+function CMD.get_startskynet2(query, header, body)
+  local cmd = "python2 startskynet.py"
+  local ret = syscmd(cmd)
+  return ret
+end
+
+function CMD.get_startskynet3(query, header, body)
+  local cmd = "python3 startskynet.py"
+  local ret = syscmd(cmd)
+  return ret
+end
+
+function CMD.get_stopskynet(query, header, body)
+  local cmd = "bash stopskynet.sh"
+  local ret = syscmd(cmd)
+  return ret
+end
+
 function CMD.get_test(query, header, body)
     local ret = {
         query = query,
